@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap");
+
+/* House style — main #9B2C1F ground #FFF7F0 ink #1C1410 accent #C9782A
+   headings: Fraunces, serif body: Nunito Sans, sans-serif */
+
+/* --- Shared: house style (Member 1) --- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff7f0;
+  color: #1c1410;
+  line-height: 1.5;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Fraunces, serif;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+img,
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+header {
+  background: #9b2c1f;
+  color: #fff7f0;
+}
+
+header a {
+  color: #fff7f0;
+}
+
+nav {
+  background: #1c1410;
+}
+
+nav a {
+  color: #fff7f0;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #c9782a;
+  text-decoration: underline;
+}
+
+a {
+  color: #9b2c1f;
+}
+
+header,
+main,
+aside,
+footer {
+  padding: 1rem;
+}
+
+aside {
+  background: #f3e4d4;
+}
+
+aside h2 {
+  margin-top: 0;
+}
+
+footer {
+  background: #1c1410;
+  color: #fff7f0;
+}
+
+footer a {
+  color: #c9782a;
+}
+
+/* --- Shared: layout (Member 1) --- */
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 1rem;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 18rem;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+  min-width: 0;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card-row > li,
+.card {
+  flex: 1 1 14rem;
+  background: #ffffff;
+  border: 1px solid #e4d3c3;
+  border-top: 4px solid #c9782a;
+  padding: 1rem;
+}
+
+/* --- Member: home (Wesley) --- */
+
+.hours-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+/* --- Member: menu cards (Wesley) --- */
+
+.menu-card h3 {
+  margin-top: 0;
+}
+
+.price {
+  font-weight: 700;
+  color: #9b2c1f;
+}
+
+.tag {
+  display: inline-block;
+  background: #c9782a;
+  color: #1c1410;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Member: order form (Wesley) --- */
+
+.order-form,
+.contact-form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 36rem;
+}
+
+.order-form label,
+.contact-form label {
+  display: block;
+  font-weight: 700;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea,
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #c4b0a0;
+  background: #ffffff;
+  color: #1c1410;
+  font: inherit;
+}
+
+fieldset {
+  border: 1px solid #e4d3c3;
+  padding: 0.75rem 1rem;
+  min-width: 0;
+}
+
+.choice-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.choice-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.choice-list input {
+  width: auto;
+  max-width: none;
+}
+
+button {
+  justify-self: start;
+  background: #9b2c1f;
+  color: #fff7f0;
+  border: 0;
+  padding: 0.6rem 1.2rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background: #7a2117;
+}
+
+/* --- Member: pickup table (Wesley) --- */
+
+.locations-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.locations-table th,
+.locations-table td {
+  border: 1px solid #e4d3c3;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.locations-table th {
+  background: #9b2c1f;
+  color: #fff7f0;
+  font-family: Fraunces, serif;
+}
+
+.locations-table caption {
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Shared: phone (Member 1) — keep last --- */
+
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
