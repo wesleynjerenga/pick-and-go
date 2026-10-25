@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order — Pick and Go</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Pick and Go</h1>
+    <p>Order from your phone. Collect at the counter. No queue for a table.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="locations.html">Locations</a></li>
+      <li><a href="how-it-works.html">How it works</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Place a pickup order</h2>
+      <p>This form is the public order. Choose a counter and a slot at least thirty minutes from now. Pay on M-Pesa to 400200 when the kitchen texts a till message. Collect with the name you type below.</p>
+    </section>
+
+    <section>
+      <h2>Your bag</h2>
+      <form class="order-form" action="order.html" method="get">
+        <p>
+          <label for="full-name">Name on the bag</label>
+          <input id="full-name" name="full-name" type="text" required autocomplete="name">
+        </p>
+        <p>
+          <label for="phone">Phone (M-Pesa and the call if we are late)</label>
+          <input id="phone" name="phone" type="tel" required autocomplete="tel">
+        </p>
+        <p>
+          <label for="counter">Pickup counter</label>
+          <select id="counter" name="counter" required>
+            <option value="">Choose a counter</option>
+            <option value="westlands">Westlands, Ring Road</option>
+            <option value="cbd">Kenyatta Avenue, CBD</option>
+            <option value="ngong">Ngong Road, Adams</option>
+            <option value="rongai">Ongata Rongai, Magadi Road</option>
+            <option value="kiserian">Kiserian, Namanga Road</option>
+          </select>
+        </p>
+        <p>
+          <label for="slot">Collection slot</label>
+          <select id="slot" name="slot" required>
+            <option value="">Choose a time</option>
+            <option value="1130">11:30</option>
+            <option value="1230">12:30</option>
+            <option value="1330">13:30</option>
+            <option value="1700">17:00</option>
+            <option value="1830">18:30</option>
+            <option value="1930">19:30</option>
+          </select>
+        </p>
+        <fieldset>
+          <legend>Plates (tick one or more)</legend>
+          <ul class="choice-list">
+            <li>
+              <input id="dish-wrap" name="dish" type="checkbox" value="wrap">
+              <label for="dish-wrap">Chapati wrap, beef — KSh 280</label>
+            </li>
+            <li>
+              <input id="dish-rice" name="dish" type="checkbox" value="rice">
+              <label for="dish-rice">Rice and chicken stew — KSh 350</label>
+            </li>
+            <li>
+              <input id="dish-fish" name="dish" type="checkbox" value="fish">
+              <label for="dish-fish">Tilapia, ugali — KSh 420</label>
+            </li>
+            <li>
+              <input id="dish-githeri" name="dish" type="checkbox" value="githeri">
+              <label for="dish-githeri">Githeri bowl — KSh 220</label>
+            </li>
+            <li>
+              <input id="dish-goat" name="dish" type="checkbox" value="goat">
+              <label for="dish-goat">Goat wet fry, chapati — KSh 480</label>
+            </li>
+            <li>
+              <input id="dish-beans" name="dish" type="checkbox" value="beans">
+              <label for="dish-beans">Coconut bean stew — KSh 240</label>
+            </li>
+          </ul>
+        </fieldset>
+        <p>
+          <label for="drink">Drink</label>
+          <select id="drink" name="drink">
+            <option value="none">No drink</option>
+            <option value="passion">Fresh passion — KSh 80</option>
+            <option value="chai">Chai — KSh 50</option>
+            <option value="water">Water — KSh 40</option>
+          </select>
+        </p>
+        <p>
+          <label for="notes">Kitchen notes (chilli, nuts, late collection)</label>
+          <textarea id="notes" name="notes" rows="4"></textarea>
+        </p>
+        <p>
+          <button type="submit">Send the order</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <aside>
+    <h2>Kitchen notes</h2>
+    <ul>
+      <li>Pay after you receive the till text. Do not send money to a number that is not 400200.</li>
+      <li>Missed slot: we hold the bag for ninety minutes.</li>
+      <li>Helpline: <a href="tel:+254711400200">0711 400 200</a>.</li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>Pick and Go · Team Odysseus · Nairobi counters.</p>
+    <p>Site built for DBT 1305, Web Application Development, 2026.</p>
+  </footer>
+</body>
+</html>

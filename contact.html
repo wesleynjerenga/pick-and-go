@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Pick and Go</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Pick and Go</h1>
+    <p>Order from your phone. Collect at the counter. No queue for a table.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="locations.html">Locations</a></li>
+      <li><a href="how-it-works.html">How it works</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Talk to the kitchen</h2>
+      <p>Use the helpline for a bag that is late. Use the form below for a complaint, a missing item, or a question that can wait until morning. Orders still go on the <a href="order.html">order page</a>.</p>
+    </section>
+
+    <section>
+      <h2>Office and phone</h2>
+      <address>
+        Pick and Go kitchen office<br>
+        Ngong Road counter, Adams Arcade<br>
+        Nairobi
+      </address>
+      <ul>
+        <li><a href="tel:+254711400200">0711 400 200</a> — helpline, every counter</li>
+        <li><a href="tel:+254722118400">0722 118 400</a> — office, weekdays 9:00 to 17:00</li>
+        <li><a href="mailto:kitchen@pickandgo.co.ke">kitchen@pickandgo.co.ke</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Write to us</h2>
+      <form class="contact-form" action="contact.html" method="get">
+        <p>
+          <label for="contact-name">Your name</label>
+          <input id="contact-name" name="contact-name" type="text" required autocomplete="name">
+        </p>
+        <p>
+          <label for="contact-phone">Phone</label>
+          <input id="contact-phone" name="contact-phone" type="tel" required autocomplete="tel">
+        </p>
+        <p>
+          <label for="topic">About</label>
+          <select id="topic" name="topic" required>
+            <option value="">Choose a subject</option>
+            <option value="late">A late bag</option>
+            <option value="wrong">Wrong plate in the bag</option>
+            <option value="pay">Payment on 400200</option>
+            <option value="other">Something else</option>
+          </select>
+        </p>
+        <p>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </p>
+        <p>
+          <button type="submit">Send the message</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <aside>
+    <h2>Kitchen notes</h2>
+    <ul>
+      <li>Helpline first if you are already at a hatch.</li>
+      <li>Office mail is read after 9:00 on weekdays.</li>
+      <li>Do not send M-Pesa to the office number.</li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>Pick and Go · Team Odysseus · Nairobi counters.</p>
+    <p>Site built for DBT 1305, Web Application Development, 2026.</p>
+  </footer>
+</body>
+</html>
