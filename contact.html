@@ -24,37 +24,47 @@
     </ul>
   </nav>
 
-  <main>
-    <section>
+  <main class="contact-page">
+    <section class="contact-card intro-card">
+      <p class="eyebrow">Need help?</p>
       <h2>Talk to the kitchen</h2>
       <p>Use the helpline for a bag that is late. Use the form below for a complaint, a missing item, or a question that can wait until morning. Orders still go on the <a href="order.html">order page</a>.</p>
     </section>
 
-    <section>
+    <section class="contact-card details-card">
       <h2>Office and phone</h2>
-      <address>
-        Pick and Go kitchen office<br>
-        Ngong Road counter, Adams Arcade<br>
-        Nairobi
-      </address>
-      <ul>
-        <li><a href="tel:+254711400200">0711 400 200</a> — helpline, every counter</li>
-        <li><a href="tel:+254722118400">0722 118 400</a> — office, weekdays 9:00 to 17:00</li>
-        <li><a href="mailto:kitchen@pickandgo.co.ke">kitchen@pickandgo.co.ke</a></li>
-      </ul>
+      <div class="detail-group">
+        <div>
+          <p class="detail-label">Location</p>
+          <address>
+            Pick and Go kitchen office<br>
+            Ngong Road counter, Adams Arcade<br>
+            Nairobi
+          </address>
+        </div>
+
+        <ul class="contact-list">
+          <li><a href="tel:+254711400200">0711 400 200</a><span>Helpline, every counter</span></li>
+          <li><a href="tel:+254722118400">0722 118 400</a><span>Office, weekdays 9:00 to 17:00</span></li>
+          <li><a href="mailto:kitchen@pickandgo.co.ke">kitchen@pickandgo.co.ke</a></li>
+        </ul>
+      </div>
     </section>
 
-    <section>
+    <section class="contact-card form-card">
       <h2>Write to us</h2>
       <form class="contact-form" action="contact.html" method="get">
-        <p>
-          <label for="contact-name">Your name</label>
-          <input id="contact-name" name="contact-name" type="text" required autocomplete="name">
-        </p>
-        <p>
-          <label for="contact-phone">Phone</label>
-          <input id="contact-phone" name="contact-phone" type="tel" required autocomplete="tel">
-        </p>
+        <div class="field-row">
+          <p>
+            <label for="contact-name">Your name</label>
+            <input id="contact-name" name="contact-name" type="text" required autocomplete="name">
+          </p>
+          <p>
+            <label for="contact-phone">Phone</label>
+            <input id="contact-phone" name="contact-phone" type="tel" required autocomplete="tel">
+          </p>
+        </div>
+
         <p>
           <label for="topic">About</label>
           <select id="topic" name="topic" required>
