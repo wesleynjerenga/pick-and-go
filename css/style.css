@@ -1958,7 +1958,7 @@ button:focus {
     min-height: 66px;
     flex-wrap: wrap;
     gap: 0 1rem;
-    padding: 0.55rem 1rem 0;
+    padding: 0.55rem max(1rem, env(safe-area-inset-right)) 0 max(1rem, env(safe-area-inset-left));
   }
 
   .prototype-page .brand {
@@ -1968,19 +1968,29 @@ button:focus {
   .prototype-page .app-nav {
     order: 3;
     width: 100%;
-    height: 40px;
-    justify-content: space-between;
+    height: 44px;
+    justify-content: flex-start;
     gap: 0.6rem;
     overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+  }
+
+  .prototype-page .app-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .prototype-page .app-nav a {
     flex: 0 0 auto;
+    min-height: 44px;
+    padding: 0 0.25rem;
     font-size: 0.72rem;
+    scroll-snap-align: start;
   }
 
   .prototype-page .prototype-main {
-    width: min(100% - 28px, 620px);
+    width: min(100% - 24px, 620px);
     padding-top: 1.7rem;
   }
 
@@ -2020,12 +2030,57 @@ button:focus {
 }
 
 @media (max-width: 520px) {
+  .prototype-page .app-header {
+    padding-right: max(0.8rem, env(safe-area-inset-right));
+    padding-left: max(0.8rem, env(safe-area-inset-left));
+  }
+
   .prototype-page .header-cart > span {
     display: none;
   }
 
+  .prototype-page .header-cart {
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+  }
+
+  .prototype-page .prototype-main {
+    width: min(100% - 20px, 440px);
+    padding-top: 1.25rem;
+    padding-bottom: 3rem;
+  }
+
+  .prototype-page .screen {
+    scroll-margin-top: 112px;
+  }
+
   .prototype-page .welcome-row h1 {
     font-size: 1.65rem;
+  }
+
+  .prototype-page .welcome-row .eyebrow {
+    font-size: 0.59rem;
+    letter-spacing: 0.075em;
+  }
+
+  .profile-button {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+  }
+
+  .search-bar {
+    height: 50px;
+  }
+
+  .search-bar input {
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  .search-bar kbd {
+    display: none;
   }
 
   .quick-filters {
@@ -2034,6 +2089,7 @@ button:focus {
   }
 
   .quick-filters a {
+    min-height: 42px;
     padding: 0.48rem 0.68rem;
     font-size: 0.71rem;
   }
@@ -2063,10 +2119,22 @@ button:focus {
     font-size: 0.63rem;
   }
 
+  .restaurant-card:focus-visible,
+  .quick-filters a:focus-visible,
+  .prototype-page .app-nav a:focus-visible,
+  .prototype-page .header-cart:focus-visible,
+  .prototype-page .add-button:focus-visible,
+  .prototype-page .place-order-button:focus-visible,
+  .prototype-page .kitchen-action:focus-visible {
+    outline: 3px solid #bd8ca0;
+    outline-offset: 3px;
+  }
+
   .menu-screen,
   .checkout-screen,
   .progress-screen,
   .kitchen-screen {
+    margin-top: 2.5rem;
     padding: 1rem;
   }
 
@@ -2103,8 +2171,40 @@ button:focus {
     gap: 0.6rem;
   }
 
+  .prototype-page .add-button {
+    min-height: 42px;
+    min-width: 62px;
+    align-content: center;
+  }
+
+  .stock-label {
+    max-width: 62px;
+    font-size: 0.64rem;
+    text-align: right;
+  }
+
   .menu-item-copy small {
-    max-width: 38vw;
+    max-width: min(42vw, 190px);
+  }
+
+  .segmented-control label {
+    min-height: 44px;
+    align-content: center;
+  }
+
+  .slot-option {
+    min-height: 54px;
+  }
+
+  .payment-option {
+    min-height: 58px;
+  }
+
+  .prototype-page .place-order-button {
+    bottom: calc(8px + env(safe-area-inset-bottom));
+    min-height: 52px;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   .slot-option {
@@ -2150,6 +2250,71 @@ button:focus {
   .prototype-page .prototype-footer {
     align-items: flex-start;
     flex-direction: column;
-    padding: 1rem;
+    padding: 1rem max(1rem, env(safe-area-inset-right)) 1rem max(1rem, env(safe-area-inset-left));
+  }
+}
+
+@media (max-width: 360px) {
+  .prototype-page .prototype-main {
+    width: calc(100% - 16px);
+  }
+
+  .prototype-page .app-nav {
+    gap: 0.45rem;
+  }
+
+  .prototype-page .app-nav a {
+    font-size: 0.68rem;
+  }
+
+  .restaurant-image {
+    flex-basis: 27%;
+  }
+
+  .restaurant-card-body {
+    padding-right: 1.8rem;
+  }
+
+  .restaurant-meta {
+    font-size: 0.59rem;
+  }
+
+  .wait-status {
+    font-size: 0.64rem;
+  }
+
+  .wait-busy b {
+    font-size: 0.54rem;
+  }
+
+  .menu-hero {
+    height: 135px;
+  }
+
+  .menu-item-copy small {
+    max-width: 36vw;
+  }
+
+  .summary-card {
+    padding-right: 0.7rem;
+    padding-left: 0.7rem;
+  }
+
+  .prototype-page .order-steps strong {
+    font-size: 0.55rem;
+  }
+
+  .order-steps small {
+    font-size: 0.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .success-check {
+    animation: none;
+  }
+
+  .restaurant-card {
+    transition: none;
   }
 }
