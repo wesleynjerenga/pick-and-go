@@ -3,293 +3,70 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#6e1838">
-  <title>Pick &amp; Go — Strathmore University</title>
+  <title>Pick and Go — order food, collect it ready</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="prototype-page">
-  <header class="app-header">
-    <a class="brand" href="#home" aria-label="Pick and Go home">
-      <span class="brand-mark" aria-hidden="true">P<span>&amp;</span>G</span>
-      <span class="brand-copy"><strong>pick<span>&amp;</span>go</strong><small>STRATHMORE UNIVERSITY</small></span>
-    </a>
-    <nav class="app-nav" aria-label="Prototype screens">
-      <a class="active" href="#home">Discover</a>
-      <a href="#restaurant-menu">Menu</a>
-      <a href="#checkout">Checkout</a>
-      <a href="#order-progress">My order</a>
-      <a href="#kitchen-dashboard">Kitchen</a>
-    </nav>
-    <a class="header-cart" href="#checkout" aria-label="Shopping cart, 2 items">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 1.9-1.4L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
-      <span>Cart</span><b>2</b>
-    </a>
+<body>
+  <header>
+    <h1>Pick and Go</h1>
+    <p>Order from your phone. Collect at the counter. No queue for a table.</p>
   </header>
 
-  <main class="prototype-main">
-    <section class="screen home-screen" id="home" aria-labelledby="home-title">
-      <div class="welcome-row">
-        <div>
-          <p class="eyebrow">MONDAY, 12:42 PM <span class="campus-dot"></span> STRATHMORE CAMPUS</p>
-          <h1 id="home-title">Hello, Alex <span aria-hidden="true">👋</span></h1>
-          <p class="lead">Hungry? Skip the lines.</p>
-        </div>
-        <a class="profile-button" href="#home" aria-label="Student profile">AM</a>
-      </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="locations.html">Locations</a></li>
+      <li><a href="how-it-works.html">How it works</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-      <form class="search-bar" role="search" action="#home">
-        <label class="sr-only" for="food-search">Search for food or coffee</label>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg>
-        <input id="food-search" type="search" placeholder="Search for food or coffee...">
-        <kbd>⌘ K</kbd>
-      </form>
-
-      <div class="quick-filters" aria-label="Popular food categories">
-        <a href="#restaurant-menu">☕ <span>Coffee</span></a>
-        <a href="#restaurant-menu">🍟 <span>Fast Food</span></a>
-        <a href="#restaurant-menu">🍛 <span>Traditional Meals</span></a>
-        <a href="#restaurant-menu">🥤 <span>Drinks</span></a>
-      </div>
-
-      <div class="section-heading">
-        <div><p class="eyebrow">FIND YOUR NEXT BITE</p><h2>Explore campus</h2></div>
-        <a href="#restaurant-menu" class="text-link">View all spots <span aria-hidden="true">→</span></a>
-      </div>
-
-      <section class="floor-section" aria-labelledby="ground-floor-title">
-        <div class="floor-heading"><h3 id="ground-floor-title">Ground floor</h3><span>1 restaurant</span></div>
-        <a class="restaurant-card coffee-card" href="#restaurant-menu">
-          <span class="restaurant-image" role="img" aria-label="Freshly brewed coffee and coffee beans"></span>
-          <span class="restaurant-card-body">
-            <span class="restaurant-type">COFFEE · BAKERY</span>
-            <strong>SU Main Coffee Station</strong>
-            <span class="restaurant-meta">◷ &nbsp;Open until 6:00 PM <span>·</span> Ground Floor</span>
-            <span class="wait-status wait-ready"><i></i> 5 mins wait</span>
-          </span>
-          <span class="card-arrow" aria-hidden="true">↗</span>
-        </a>
-      </section>
-
-      <section class="floor-section" aria-labelledby="first-floor-title">
-        <div class="floor-heading"><h3 id="first-floor-title">First floor</h3><span>2 restaurants</span></div>
-        <div class="restaurant-grid">
-          <a class="restaurant-card food-card swahili-card" href="#restaurant-menu">
-            <span class="restaurant-image" role="img" aria-label="Colorful Swahili rice and traditional dishes"></span>
-            <span class="restaurant-card-body">
-              <span class="restaurant-type">SWAHILI · LOCAL FAVOURITE</span>
-              <strong>Stall A: Swahili Dishes</strong>
-              <span class="restaurant-meta">◷ &nbsp;Open until 4:00 PM <span>·</span> First Floor</span>
-              <span class="wait-status wait-busy"><i></i> 25 mins wait <b>High traffic</b></span>
-            </span>
-            <span class="card-arrow" aria-hidden="true">↗</span>
-          </a>
-          <a class="restaurant-card food-card burger-card" href="#restaurant-menu">
-            <span class="restaurant-image" role="img" aria-label="Burger and fries served fresh"></span>
-            <span class="restaurant-card-body">
-              <span class="restaurant-type">BURGERS · FAST FOOD</span>
-              <strong>Stall B: Burgers &amp; Fries</strong>
-              <span class="restaurant-meta">◷ &nbsp;Open until 5:00 PM <span>·</span> First Floor</span>
-              <span class="wait-status wait-moderate"><i></i> 12 mins wait</span>
-            </span>
-            <span class="card-arrow" aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </section>
-
-      <section class="floor-section" aria-labelledby="top-floor-title">
-        <div class="floor-heading"><h3 id="top-floor-title">Top floor</h3><span>1 restaurant</span></div>
-        <a class="restaurant-card dining-card" href="#restaurant-menu">
-          <span class="restaurant-image" role="img" aria-label="A warm, bright dining hall"></span>
-          <span class="restaurant-card-body">
-            <span class="restaurant-type">ALL-DAY DINING</span>
-            <strong>The Grand Dining Hall</strong>
-            <span class="restaurant-meta">◷ &nbsp;Open until 7:00 PM <span>·</span> Top Floor</span>
-            <span class="wait-status wait-ready"><i></i> 8 mins wait</span>
-          </span>
-          <span class="card-arrow" aria-hidden="true">↗</span>
-        </a>
-      </section>
+  <main>
+    <section>
+      <h2>Food ready when you are</h2>
+      <p>Pick and Go is a Nairobi pickup kitchen. You place an order, choose a counter, and collect a bag with your name on it. We cook to the slot you pick, so lunch does not mean twenty minutes on a pavement.</p>
+      <p>The kitchen runs five counters: Westlands, Kenyatta Avenue, Ngong Road, Rongai and Kiserian. The same menu, the same prices, one payment on the order form.</p>
     </section>
 
-    <section class="screen menu-screen" id="restaurant-menu" aria-labelledby="menu-title">
-      <div class="screen-kicker"><span>SCREEN 02</span><span>RESTAURANT MENU</span></div>
-      <a class="back-link" href="#home">← &nbsp;Back to campus</a>
-      <div class="menu-hero">
-        <span class="menu-hero-image" role="img" aria-label="Coffee beans and a fresh latte"></span>
-        <span class="hero-tag">☕ &nbsp;CAMPUS COFFEE</span>
-      </div>
-      <div class="vendor-heading">
-        <div>
-          <p class="eyebrow">GROUND FLOOR · STUDENT CENTRE</p>
-          <h2 id="menu-title">SU Main Coffee Station</h2>
-          <p>Good coffee, made for your next big idea.</p>
-        </div>
-        <span class="open-label"><i></i> Open now <small>Until 6:00 PM</small></span>
-      </div>
-      <div class="menu-category-heading"><h3>Popular picks</h3><span>Made fresh to order</span></div>
-      <div class="menu-list">
-        <article class="menu-item">
-          <span class="menu-thumb latte-thumb" role="img" aria-label="Iced caramel latte"></span>
-          <span class="menu-item-copy"><strong>Iced Caramel Latte</strong><small>Espresso, silky milk, house caramel</small><b>KES 220</b></span>
-          <a class="add-button" href="#checkout">+ Add</a>
-        </article>
-        <article class="menu-item">
-          <span class="menu-thumb cappuccino-thumb" role="img" aria-label="Cappuccino with latte art"></span>
-          <span class="menu-item-copy"><strong>Classic Cappuccino</strong><small>Double espresso, steamed milk, cocoa</small><b>KES 180</b></span>
-          <a class="add-button" href="#checkout">+ Add</a>
-        </article>
-        <article class="menu-item">
-          <span class="menu-thumb pastry-thumb" role="img" aria-label="Freshly baked croissant"></span>
-          <span class="menu-item-copy"><strong>Butter Croissant</strong><small>Flaky, golden, baked this morning</small><b>KES 150</b></span>
-          <a class="add-button" href="#checkout">+ Add</a>
-        </article>
-        <article class="menu-item unavailable">
-          <span class="menu-thumb muffin-thumb" role="img" aria-label="Chocolate muffin"></span>
-          <span class="menu-item-copy"><strong>Chocolate Muffin</strong><small>Rich chocolate, soft centre</small><b>KES 130</b></span>
-          <span class="stock-label">Out of stock</span>
-        </article>
-      </div>
-      <a href="#checkout" class="menu-cart-link">View your order <span>2 items · KES 400 →</span></a>
-    </section>
-
-    <section class="screen checkout-screen" id="checkout" aria-labelledby="checkout-title">
-      <div class="screen-kicker"><span>SCREEN 03</span><span>YOUR CHECKOUT</span></div>
-      <div class="checkout-layout">
-        <div class="checkout-main">
-          <p class="eyebrow">ALMOST THERE</p>
-          <h2 id="checkout-title">Your order</h2>
-          <div class="summary-card">
-            <div class="summary-item"><span class="summary-product"><i class="summary-icon coffee-icon">☕</i><span><strong>Iced Caramel Latte</strong><small>SU Main Coffee Station · Qty 1</small></span></span><b>KES 220</b></div>
-            <div class="summary-item"><span class="summary-product"><i class="summary-icon pastry-icon">🥐</i><span><strong>Butter Croissant</strong><small>SU Main Coffee Station · Qty 1</small></span></span><b>KES 150</b></div>
-            <div class="subtotal-row"><span>Subtotal</span><strong>KES 370</strong></div>
-            <div class="subtotal-row"><span>Campus service fee</span><strong>KES 30</strong></div>
-            <div class="total-row"><span>Total</span><strong>KES 400</strong></div>
-          </div>
-
-          <fieldset class="checkout-fieldset">
-            <legend>How are you dining?</legend>
-            <div class="segmented-control">
-              <input type="radio" name="dining" id="takeaway" checked>
-              <label for="takeaway">🥡 &nbsp;Takeaway</label>
-              <input type="radio" name="dining" id="eat-in">
-              <label for="eat-in">🍽️ &nbsp;Eat-in</label>
-            </div>
-          </fieldset>
-
-          <fieldset class="checkout-fieldset slot-fieldset">
-            <legend>Choose a pickup time</legend>
-            <p class="field-help">15-minute slots · Pick a time that works for you</p>
-            <div class="slot-list">
-              <input type="radio" name="slot" id="slot-1245">
-              <label class="slot-option congested-slot" for="slot-1245"><strong>12:45 – 1:00 PM</strong><span>● Highly congested</span></label>
-              <input type="radio" name="slot" id="slot-100">
-              <label class="slot-option moderate-slot" for="slot-100"><strong>1:00 – 1:15 PM</strong><span>● Moderate traffic</span></label>
-              <input type="radio" name="slot" id="slot-115" checked>
-              <label class="slot-option recommended-slot" for="slot-115"><strong>1:15 – 1:30 PM</strong><span>● Recommended</span></label>
-            </div>
-          </fieldset>
-
-          <fieldset class="checkout-fieldset payment-fieldset">
-            <legend>Payment method</legend>
-            <label class="payment-option"><input type="radio" name="payment" checked><span class="mpesa-mark">M</span><span><strong>Simulated M-Pesa STK Push</strong><small>Prompt sent to your phone</small></span><b class="radio-indicator"></b></label>
-            <label class="payment-option"><input type="radio" name="payment"><span class="student-mark">SU</span><span><strong>SU Student ID Balance</strong><small>Available balance: KES 2,450</small></span><b class="radio-indicator"></b></label>
-          </fieldset>
-        </div>
-        <aside class="checkout-aside">
-          <div class="aside-note"><span>✦</span><strong>Beat the rush</strong><p>Pickup times after 1:15 PM are quieter right now. Thanks for helping everyone get their lunch a little faster.</p></div>
-          <div class="secure-note">🔒 &nbsp;Secure campus checkout</div>
-        </aside>
-      </div>
-      <a class="place-order-button" href="#order-progress">Place Order &amp; Pay KES 400 <span aria-hidden="true">→</span></a>
-    </section>
-
-    <section class="screen progress-screen" id="order-progress" aria-labelledby="progress-title">
-      <div class="screen-kicker"><span>SCREEN 04</span><span>LIVE ORDER STATUS</span></div>
-      <div class="confirmation-card">
-        <span class="success-check" aria-hidden="true">✓</span>
-        <p class="eyebrow">YOU'RE ALL SET</p>
-        <h2 id="progress-title">Order confirmed!</h2>
-        <p>Your order is with the kitchen. We'll let you know when it's ready.</p>
-      </div>
-      <div class="progress-content">
-        <div class="progress-heading"><div><p class="eyebrow">SU MAIN COFFEE STATION</p><h3>On its way</h3></div><span class="preparing-pill"><i></i> Preparing</span></div>
-        <ol class="order-steps">
-          <li class="step-done"><span class="step-icon">✓</span><strong>Received</strong><small>12:42 PM</small></li>
-          <li class="step-current"><span class="step-icon">▶</span><strong>Preparing</strong><small>In the kitchen</small></li>
-          <li><span class="step-icon"></span><strong>Ready for pickup</strong><small>We'll notify you</small></li>
-          <li><span class="step-icon"></span><strong>Picked up</strong><small>Enjoy!</small></li>
-        </ol>
-        <div class="token-card">
-          <p class="eyebrow">YOUR COLLECTION TOKEN</p>
-          <strong class="token-number">#042A</strong>
-          <div class="qr-code" role="img" aria-label="Decorative QR code placeholder">
-            <span class="qr-finder qr-top-left"></span><span class="qr-finder qr-top-right"></span><span class="qr-finder qr-bottom-left"></span>
-          </div>
-          <small>Show this code at the pickup counter</small>
-        </div>
-        <div class="countdown-card"><span class="clock-icon" aria-hidden="true">◷</span><span><small>ESTIMATED PICKUP</small><strong>Your food will be ready in approximately <b>9 minutes.</b></strong></span></div>
-      </div>
-    </section>
-
-    <section class="screen kitchen-screen" id="kitchen-dashboard" aria-labelledby="kitchen-title">
-      <div class="screen-kicker"><span>SCREEN 05</span><span>VENDOR VIEW · DESKTOP</span></div>
-      <div class="kitchen-heading">
-        <div><p class="eyebrow">SU MAIN COFFEE STATION</p><h2 id="kitchen-title">Kitchen dashboard</h2></div>
-        <span class="kitchen-open"><i></i> Kitchen is open</span>
-      </div>
-      <div class="kitchen-summary">
-        <span>Today's orders <strong>28</strong></span><span>In kitchen <strong>4</strong></span><span>Ready to collect <strong>2</strong></span>
-        <span class="live-label"><i></i> LIVE QUEUE</span>
-      </div>
-      <div class="kitchen-columns">
-        <section class="kitchen-column" aria-labelledby="incoming-title">
-          <div class="column-heading"><h3 id="incoming-title">New orders</h3><span class="count-badge">2</span></div>
-          <article class="kitchen-order incoming-order">
-            <div class="order-card-top"><strong>Token #042</strong><time>12:42 PM</time></div>
-            <span class="order-student">Alex M. · Takeaway</span>
-            <ul><li>1 × Iced Caramel Latte</li><li>1 × Butter Croissant</li></ul>
-            <span class="order-total">KES 400 <small>· M-Pesa</small></span>
-            <a class="kitchen-action accept-action" href="#kitchen-dashboard">👨‍🍳 &nbsp;Accept &amp; Start Cooking</a>
-          </article>
-          <article class="kitchen-order">
-            <div class="order-card-top"><strong>Token #043</strong><time>12:44 PM</time></div>
-            <span class="order-student">Miriam K. · Eat-in</span>
-            <ul><li>1 × Classic Cappuccino</li><li>1 × Butter Croissant</li></ul>
-            <span class="order-total">KES 360 <small>· Student ID</small></span>
-            <a class="kitchen-action accept-action" href="#kitchen-dashboard">👨‍🍳 &nbsp;Accept &amp; Start Cooking</a>
-          </article>
-        </section>
-
-        <section class="kitchen-column active-column" aria-labelledby="active-title">
-          <div class="column-heading"><h3 id="active-title">Preparing</h3><span class="count-badge active-count">4</span></div>
-          <article class="kitchen-order">
-            <div class="order-card-top"><strong>Token #039</strong><time>12:35 PM</time></div>
-            <span class="order-student">James O. · Takeaway</span>
-            <ul><li>2 × Iced Caramel Latte</li><li>1 × Chocolate Muffin</li></ul>
-            <span class="cooking-status">◷ &nbsp;Cooking · 4 min</span>
-            <a class="kitchen-action ready-action" href="#order-progress">📦 &nbsp;Mark as Ready for Pickup</a>
-          </article>
-          <article class="kitchen-order compact-order">
-            <div class="order-card-top"><strong>Token #040</strong><time>12:38 PM</time></div>
-            <span class="order-student">Amina W. · Takeaway</span>
-            <ul><li>1 × Classic Cappuccino</li></ul>
-            <a class="kitchen-action ready-action" href="#order-progress">📦 &nbsp;Mark as Ready for Pickup</a>
-          </article>
-        </section>
-
-        <section class="kitchen-column completed-column" aria-labelledby="completed-title">
-          <div class="column-heading"><h3 id="completed-title">Completed</h3><span class="count-badge done-count">2</span></div>
-          <article class="completed-order"><span class="done-icon">✓</span><span><strong>Token #037</strong><small>Sarah N. · Picked up 12:40</small></span></article>
-          <article class="completed-order"><span class="done-icon">✓</span><span><strong>Token #038</strong><small>Peter K. · Picked up 12:41</small></span></article>
-          <a class="archive-link" href="#kitchen-dashboard">View order archive →</a>
-        </section>
-      </div>
-      <p class="prototype-note">Static UI prototype · Buttons and live kitchen updates are visual demonstrations.</p>
+    <section>
+      <h2>What people collect today</h2>
+      <ul class="card-row">
+        <li>
+          <h3>Chapati wrap, beef</h3>
+          <p>Two chapatis, slow-cooked beef, kachumbari. Packed to eat at a desk.</p>
+          <p class="price">KSh 280</p>
+        </li>
+        <li>
+          <h3>Rice, chicken stew</h3>
+          <p>Plain rice, chicken in tomato gravy, steamed cabbage. The weekday default.</p>
+          <p class="price">KSh 350</p>
+        </li>
+        <li>
+          <h3>Githeri, avocado</h3>
+          <p>Beans and maize, a squeeze of lemon, half an avocado on the side.</p>
+          <p class="price">KSh 220</p>
+        </li>
+      </ul>
+      <p><a href="menu.html">See the full menu</a> or <a href="order.html">place an order</a>.</p>
     </section>
   </main>
 
-  <footer class="prototype-footer">
-    <span>pick<span>&amp;</span>go</span><span>Made for Strathmore University · Campus dining, minus the queues.</span>
+  <aside>
+    <h2>Kitchen notes</h2>
+    <ul>
+      <li>Counters open <strong>11:00 to 20:00</strong>, Monday to Saturday.</li>
+      <li>Sunday: Westlands and Kenyatta Avenue only, 12:00 to 18:00.</li>
+      <li>Helpline: <a href="tel:+254711400200">0711 400 200</a> — if a bag is late, call before you leave the counter.</li>
+      <li>Today’s extra: coconut bean stew, KSh 240, while stock lasts.</li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>Pick and Go · Team Odysseus · Nairobi counters.</p>
+    <p>Site built for DBT 1305, Web Application Development, 2026.</p>
   </footer>
 </body>
 </html>
